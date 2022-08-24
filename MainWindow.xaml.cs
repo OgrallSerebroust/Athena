@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,9 +23,21 @@ namespace AthenaNewGeneration
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void SelectSpecialTask(string taskString)
         {
-            MessageBox.Show("Hello World!");
+            if (taskString == "Hello")
+            {
+                Process.Start(@"D:\Python\python", @"D:\MyProjects\AthenaNewGeneration\test.py");
+            }
+        }
+
+        private void TextBoxConfirmTask(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                MessageBox.Show(TextBoxSpecialTask.Text);
+                SelectSpecialTask(TextBoxSpecialTask.Text);
+            }
         }
     }
 }

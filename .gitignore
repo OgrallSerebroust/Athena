@@ -1,4 +1,9 @@
 .idea
 obj
 bin
+mysql-connector-net-8.0.30-noinstall
+mysql-connector-net-8.0.30-noinstall.zip
+ContextModelDonatePrice.cs
+ModelDonatesPrices.cs
+DBUtils.cs
 test.py

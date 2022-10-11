@@ -11,4 +11,14 @@
       <Compile Remove="SpecialTasks.cs" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Reference Include="MySql.Data">
+        <HintPath>mysql-connector-net-8.0.30-noinstall\v4.8\MySql.Data.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.2" />
+    </ItemGroup>
+
 </Project>

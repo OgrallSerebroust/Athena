@@ -25,9 +25,26 @@ namespace AthenaNewGeneration
 
         private void SelectSpecialTask(string taskString)
         {
-            if (taskString == "Hello")
+            /*if (taskString == "Hello")
             {
                 Process.Start(@"D:\Python\python", @"D:\MyProjects\AthenaNewGeneration\test.py");
+            }*/
+
+            switch (taskString)
+            {
+                case "Hello":
+                    Process.Start(@"D:\Python\python", @"D:\MyProjects\AthenaNewGeneration\test.py");
+                    break;
+                case "To do":
+                    ToDoWindow toDoWindow = new ToDoWindow();
+                    toDoWindow.Owner = this;
+                    toDoWindow.Show();
+                    break;
+                case "Game":
+                    CamSimWindow camSimWindow = new CamSimWindow();
+                    camSimWindow.Owner = this;
+                    camSimWindow.Show();
+                    break;
             }
         }
 

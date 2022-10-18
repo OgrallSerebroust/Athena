@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:AthenaNewGeneration"
         mc:Ignorable="d"
         Title="ToDoWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <local:ViewModel></local:ViewModel>
+    </Window.DataContext>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -31,7 +34,9 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" x:Name="OurDonatShowing"></TextBlock>
-        <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Click="MakeDonate"></Button>
+        <TextBlock Grid.Row="1" Grid.Column="0" x:Name="OurDonatShowing"></TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="1" x:Name="WorkTimer" Text="{Binding OurDonate, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
+        <Button Grid.Row="2" Grid.Column="0" Click="MakeDonate"></Button>
+        <Button Grid.Row="2" Grid.Column="1" Command="{Binding ClickCommand}"></Button>
     </Grid>
 </Window>

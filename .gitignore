@@ -1,3 +1,13 @@
 .idea
-obj
 bin
+cmake-build-debug
+garbage
+mysql-connector-net-8.0.30-noinstall
+obj
+mysql-connector-net-8.0.30-noinstall.zip
+ContextModelDonatePrice.cs
+DBUtils.cs
+ModelDonatesPrices.cs
+test.py
+CMakeLists.txt
+AthenaNewGeneration.sln.DotSettings.user
